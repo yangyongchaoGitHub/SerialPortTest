@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="5">
+
+        <TextView
+            android:id="@+id/tv_send_mainui"
+            android:layout_width="match_parent"
+            android:layout_height="200dp" />
+
+        <View
+            android:id="@+id/center"
+            android:layout_width="wrap_content"
+            android:layout_height="5dp"
+            android:layout_below="@+id/tv_send_mainui"
+            android:background="@color/yellow" />
+
+        <TextView
+            android:id="@+id/tv_rsv_mainui"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_below="@+id/center" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_weight="5">
+
+        <EditText
+            android:layout_centerInParent="true"
+            android:id="@+id/et_msg_mainui"
+            android:layout_width="match_parent"
+            android:layout_height="60dp" />
+
+        <Button
+            android:id="@+id/btn_at_mainui"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="20dp"
+            android:text="AT" />
+
+        <Button
+            android:id="@+id/btn_atdefault_mainui"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btn_at_mainui"
+            android:layout_alignEnd="@+id/btn_at_mainui"
+            android:layout_marginTop="10dp"
+            android:text="AT+DEFAULT" />
+
+        <Button
+            android:id="@+id/btn_atname_center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btn_atdefault_mainui"
+            android:layout_alignEnd="@+id/btn_at_mainui"
+            android:layout_marginTop="10dp"
+            android:text="AT+NAME"/>
+
+        <Button
+            android:id="@+id/btn_send_mainui"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="send"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/btn_atname_center"
+            android:layout_alignEnd="@+id/btn_at_mainui"/>
+    </RelativeLayout>
+
+</LinearLayout>
