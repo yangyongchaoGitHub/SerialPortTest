@@ -108,7 +108,7 @@ public class MainUI extends Activity implements View.OnClickListener {
     private void init() {
         SerialPort port = null;
         try {
-            port = new SerialPort(new File("/dev/ttyS2"), 9600);
+            port = new SerialPort(new File("/dev/ttyACM0"), 115200);
             fos = (FileOutputStream) port.getOutputStream();
             fis = (FileInputStream) port.getInputStream();
             if (listen == null) {
@@ -128,9 +128,9 @@ public class MainUI extends Activity implements View.OnClickListener {
                 cmd += msg[i];
             }
             Log.i(TAG, "send " + cmd);
-            fos.write(msg);
+            //fos.write(msg);
 
-        } catch (IOException e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
